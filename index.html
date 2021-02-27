@@ -29,6 +29,9 @@
                     <h1>NuCamp</h1>
                     <h2>a better way to camp</h2>
                 </div>
+                <div class="col-md-4 col-xl-2 mt-4">
+                    <a href="#reserveForm" role="button" class="btn btn-lg btn-info">Reserve Campsite</a>
+                  </div>
             </div>
         </div>
     </header>
@@ -69,13 +72,19 @@
 
         <div class="row row-content align-items-center">
             <div class="col-sm-4 col-md-3">
-                <h2>Featured Campsites</h2>
+              <h2>Featured Campsites</h2>
             </div>
             <div class="col">
-                <h3>React Lake Campground</h3>
-        		<p>Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
-   			</div>
-        </div>
+              <div class="media">
+                <div class="media-body align-self-center">
+                  <h3>React Lake Campground</h3>
+                  <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores
+                    of the pristine React Lake is a favorite for fly fishers.</p>
+                </div>
+                <img class="d-flex ml-3 img-thumbnail" src="img/react-lake-thumb.jpg" alt="React Lake" />
+              </div>
+            </div>
+          </div>
 
         <div class="row row-content align-items-center">
             <div class="col-sm-4 order-sm-last col-md-3">
@@ -92,6 +101,49 @@
             </div>
         </div>
     </div>
+                                        <!-- reservation card -->
+
+        <div class="row row-content">
+      <div class="col-sm-6 mx-auto">
+        <div class="card">
+          <h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
+          <div class="card-body">
+            <form id="reserveForm">
+              <div class="form-group row">
+                <label for="numCampers" class="col-sm-6 col-form-label">Number of Campers</label>
+                <!-- Select Dropdown -->
+                <div class="col">
+                  <select name="numCampers" id="numCampers" class="form-control">
+                    <option selected>Select...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                  </select>
+                </div>
+              </div>
+              <!-- Date -->
+              <div class="form-group row">
+                <label for="date" class="col-sm-6 col-form-label">Date</label>
+                <div class="col">
+                  <input type="date" class="form-control" id="date" name="date" placeholder="Date" />
+                </div>
+              </div>
+              <!-- Search Button -->
+              <div class="form-group row">
+                <div class="col">
+                  <button type="submit" class="btn btn-primary">Search</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+                                        
                                         <!-- main footer -->
     <footer class="site-footer">
         <div class="container">
@@ -105,7 +157,7 @@
                         <li><a href="./contactus.html">Contact</a></li>
                     </ul>
                 </div>
-                <!-- social media links -->
+                                    <!-- social media links -->
                 <div class="col-6 col-sm-5 text-center">
                 	<h5>Social</h5>
                     <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i class="fa fa-instagram"></i></a>
